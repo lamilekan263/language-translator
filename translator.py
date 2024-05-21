@@ -5,9 +5,8 @@ import os
 # Use a pipeline as a high-level helper
 from transformers import pipeline
 
-model_path = 'models/models--facebook--nllb-200-distilled-600M/snapshots/f8d333a098d19b4fd9a8b18f94170487ad3f821d'
  
-translate_text = pipeline("translation", model=model_path, torch_dtype=torch.bfloat16)
+translate_text = pipeline("translation", model='model="facebook/nllb-200-distilled-600M"', torch_dtype=torch.bfloat16)
 
 # text = 'How are you amigo'
 
